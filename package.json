@@ -1,0 +1,26 @@
+{
+  "name": "droneestates",
+  "version": "1.0.0",
+  "description": "Drone powered Real estate app",
+  "main": "repl.js",
+  "dependencies": {
+    "ar-drone": "^0.3.3",
+    "dronestream": "^1.1.1",
+    "socket.io": "latest",
+    "socket.io-client": "latest"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Donaldblanc/droneEstates.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Donaldblanc/droneEstates/issues"
+  },
+  "homepage": "https://github.com/Donaldblanc/droneEstates#readme"
+}

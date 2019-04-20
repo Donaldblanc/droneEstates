@@ -15,8 +15,10 @@ var http    = require('http');
 //var pngStream = arDrone.createClient().getPngStream();
 var client = arDrone.createClient();
 
+console.log("about to take");
 client.takeoff();
-client.after(5000, function(){
+client.after(2000, function(){
+    console.log("about to land");
     this.stop();
     this.land();
-})
+});

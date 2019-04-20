@@ -7,7 +7,7 @@
     <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="js/underscore-min.js"></script>
         <script type="text/javascript" src="js/backbone-min.js"></script>
-        <script type="text/javascript" src="js/joystick_view.js"></script>
+   
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
@@ -28,7 +28,10 @@
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
+
+      
     </noscript>
+  
     <div id="root"></div>
     <!--
       This HTML file is a template.
@@ -46,9 +49,13 @@
     <script type="text/javascript">
 
        document.addEventListener( 'DOMContentLoaded', function( event ) { 
-         let joystickView = new JoystickView(150, function(callbackView) {
+          let joystickView = new JoystickView(150, function(callbackView) {
+            window.$("#joystickContent").append(callbackView.render().el);
+                setTimeout(function(){
+                    callbackView.renderSprite();
+                }, 0);
 
-         })
+          })
 
          
          //document.querySelector("#joystickContent").appendChild(callbackView.render().el);
@@ -58,5 +65,6 @@
 
 
   </script>
+  <script type="text/javascript" src="js/joystick_view.js"></script>
   </body>
 </html>
